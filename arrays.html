@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="nameInput">
+    <button onclick="addName()">Add Name</button>
+    <div id="displayName">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    // One Input and One Button
+    // If your input field is empty, you should get an alert
+    // Push the value of your input into an already created empty array
+    // Use a loop to display every member in your array
+    let typedData = []
+    function addName() {
+       let nameInput = document.getElementById('nameInput').value.trim()
+       let displayName = document.getElementById('displayName') 
+       console.log(nameInput);
+       console.log(displayName);
+       if (nameInput === '') {
+        alert('All fields are mandatory')
+       } else {
+        typedData.push(nameInput)
+        console.log(typedData);
+        displayName.innerHTML = ''
+        for (let index = 0; index < typedData.length; index++) {
+            const element = typedData[index];
+            displayName.innerHTML += `<h4>${element}</h4>`   
+        }
+        
+       }
+       
+    }
+    let boolArr = [true, false, false]
+    let arrOfArr = [[1, 2, 3, 4, 5, 6], [7, 8, 9, 10, 11, 12, 13]]
+    console.log(arrOfArr[1][0]);
+
+
+    let myString = 'Javascript is so fun'
+    // myString = 'Yavascript'
+    let string2 = 'Javascript'
+    let arrNum = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let arrNum2 = [1, 2, 3, 4, 5, 6]
+    let copiedArr = arrNum
+
+    myString[0] = 'Y'
+    console.log(myString);
+
+    console.log(arrNum);
+
+    // Modifying with index number
+    arrNum[0] = 10
+
+    console.log(arrNum);
+
+    let newArr = new Array()
+    let anotherArr = []
+    console.log(newArr);
+    console.log(anotherArr);
+
+
+    // length
+    console.log(arrNum.length);
+    console.log(myString[myString.length - 1]);
+    console.log(arrNum[arrNum.length - 1]);
+
+    // Includes
+    console.log(myString.toLowerCase().includes('javascript'));
+    console.log(arrNum.includes(9));
+
+    let jsStudents = ['Habeeb', 'Temmy', 'Okiki']
+    console.log(jsStudents[1].includes('Tem'));
+
+    // slice
+    let newestString = 'We are moving to functions'
+    console.log(newestString.slice(7));
+    console.log(newestString);
+
+    let newestArr = ['Habeeb', 'Temmy', 'Okiki', 'Habeeb 2', 'Felix', 'Ibrahim', "Oreofe"]
+    console.log(newestArr.slice(0, 3));
+    console.log(newestArr);
+
+    // Push adds an element to the back of an array
+    let userData = []
+    userData.push('Habeeb', 'Felix', 'Temmy')
+    console.log(userData);
+
+    // Pop deletes an element at the back of my array
+    let numArr = [1, 2, 3, 4, 5, 6, 7, 8]
+    numArr.pop()
+    console.log(numArr);
+
+    // Unshift add an element at the front of my array
+    numArr.unshift(0)
+    console.log(numArr);
+
+    // Shift is to delete an element at the front of my array
+    numArr.shift()
+    console.log(numArr);
+
+    // Sort to arrange an array in the right order
+    let newStrArr = ['Habeeb', 'Temmy', 'Okiki', 'Habeeb 2', 'Felix', 'Ibrahim', "Oreofe"]
+    newStrArr.sort()
+    console.log(newStrArr);
+
+    let newNumArr = [2, 3, 5, 6, 7, 9, 1, 4, 8, 10, 15, 13, 12, 14, 11]
+    newNumArr.sort((a, b) => a - b)
+    console.log(newNumArr);
+
+
+    // reverse
+    newNumArr.sort((a, b) => b - a)
+    // newNumArr.reverse()
+    console.log(newNumArr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // console.log(myString[0]);
+    // console.log(arrNum[0]);
+
+    // console.log(myString === string2);
+    // console.log(arrNum === arrNum2);
+    // console.log(arrNum === copiedArr);
+
+    // console.log(copiedArr);
+
+
+
+
+
+
+
+
+</script>

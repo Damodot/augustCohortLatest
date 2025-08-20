@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="wordTag"></h1>
+    <input type="text">
+    <button onclick="checkWord()">Check Word</button>
+</body>
+</html>
+<script>
+    function checkWord() {
+        
+    }
+    // String Methods
+    let thisClass = 'Java '
+    // Length is used to know the amount of every character in a string
+    console.log(thisClass.length);
+    // Accessing Every Character Using Index Number
+    // Index is used to access every character in a string 
+    console.log(thisClass[4]);
+    console.log(thisClass[thisClass.length - 1]);
+
+    // Trim removes all white spaces from the front and at the back of a string
+    let nextClass = ' React is much more better     ' 
+    // 'React is much more better'
+    let trimmedString = nextClass.trim()
+    console.log(trimmedString);
+    console.log(nextClass);
+
+    // Quick Classwork
+    console.log(trimmedString[trimmedString.length - 1]);
+    console.log(nextClass.trim()[nextClass.trim().length - 1]);
+
+    // Includes
+    // Fuck, F**k
+    let nextString = 'Im saying FUCK yall to the unbelievers, fucking hell man'
+    console.log(nextString.includes('fuck'));
+
+
+    const wordTag = document.getElementById('wordTag')
+    wordTag.innerHTML = nextString.toUpperCase().replaceAll('FUCK', 'F**K')
+
+    // Replace
+    console.log(nextString.toLowerCase().replace('fuck', 'f**k'));
+
+    // LowerCase
+    console.log(nextString.toLowerCase());
+
+    // Uppercase
+    console.log(nextString.toUpperCase());
+
+    // Replace All
+    console.log(nextString.toUpperCase().replaceAll('FUCK', 'F**K'));
+
+    // Slice
+    let anotherVar = 'You guys are so smart'
+    console.log(anotherVar.slice(13));
+
+    // Concat
+    let firstName = 'Adedeji'
+    let lastName = 'Adedotun'
+    console.log(firstName.concat(" ", lastName));
+    console.log(firstName + ' ' + lastName);
+
+    // Interpolation
+    let a = 10
+    let b = 20
+    console.log(`The sum of ${a} and ${b} is ${a + b}`);
+    console.log(`My full name is ${firstName} ${lastName}`);
+
+    // Split
+    let randString = 'You guys are doing soo great so far'
+    console.log(randString.split());
+    console.log(randString.split(' '));
+    console.log(randString.split(''));
+    console.log(randString.split(' doing '));
+
+    // empty space = no space
+    // There is no space between Y and O
+    // There is empty space between Y and O
+
+    
+</script>

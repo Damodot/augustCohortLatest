@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <div id="showName" class="showName">
+
+    </div>
+</body>
+
+</html>
+<script>
+    // Creation of Variables
+    // Let, Var, Const
+    // Let & Var are the same thing for now, you can create a variable and then reassign
+    let courseName = 'Javascript'
+    console.log(courseName);
+
+    courseName = 'React'
+    console.log(courseName);
+
+    // Const
+    const PI = "3.14"
+    console.log(PI);
+    // PI = '6.5'
+    // console.log(PI);
+
+
+    console.log("Welcome");
+    console.log("Welcome to Javascript");
+
+    const divFromDom = document.getElementById('showName')
+    console.log(divFromDom);
+
+    // HTML ELEMENT ATTRIBUTES
+    // Elements with closing and opening tags have an attribute called innerHTML
+    console.log(divFromDom.innerHTML);
+    divFromDom.innerHTML = `
+     <h1 id="h1Tag">Hello Everybody</h1>
+        <section id="coloredSection">
+            <p></p>
+        </section>
+        <aside>
+            <strong></strong>
+        </aside>`
+
+    console.log(divFromDom);
+
+
+    const h1Tag = document.getElementById('h1Tag')
+    h1Tag.innerHTML = 'How are we doing today?'
+
+    const coloredSection = document.getElementById('coloredSection')
+    coloredSection.style.width = "250px"
+    coloredSection.style.height = "250px"
+    coloredSection.style.backgroundColor = "red"
+
+    // Javascript Data Types
+    // Primitive, strings , you cannot change every individual character
+    // Non Primitive, arrays, you can change every individual character
+    // We access every individual character using their index
+
+    // Strings, '', "", ``
+    let name = `Adedotun`
+    console.log(name[1]);
+    name[0] = 'T'
+    console.log(name);
+    name = 'Adedeji'
+    console.log(name);
+
+    // Arrays
+    let numArr = [1, 2, 3, 4, 5, 6]
+    console.log(numArr[0]);
+    numArr[0] = 500
+    console.log(numArr);
+
+    // Primitive Datas
+    // Strings
+    let newName = `My shopping is "Rice", "Beans" and "Garri", I don't want to miss any of my list`
+
+    // Numbers
+    let myNum = 20
+    console.log(20 + 15);
+
+    // Undefined
+    let undefVar
+    console.log(typeof undefVar);
+
+    undefVar = 'Emmanuel'
+    console.log(undefVar);
+
+    // Null
+    let nullVal = null
+    console.log(typeof nullVal);
+
+    // Symbols
+    let a = 10
+    let b = 10
+    console.log(a === b);
+
+    let felixSymbol = Symbol('1234')
+    let habeebSymbol = Symbol('1234')
+    console.log(felixSymbol === habeebSymbol);
+
+    // Boolean
+    let bool = true
+    let bool2 = false
+
+
+    // Non Primitive
+    // Array
+    let arr = [1, 2, 3, 4, 4]
+    let newArr = [1, 2, 3, 4, 4]
+    console.log(arr === newArr);
+    
+
+    // Object
+    let userObj = {}
+
+
+
+
+
+</script>

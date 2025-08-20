@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="divFromDom">
+        <h1>Hello</h1>
+    </div>
+
+    <button onclick="increaseNum()">Increase Number</button>
+    <h1 id="h1Tag"></h1>
+</body>
+
+</html>
+<script>
+    // Asignment Operator
+    // let a = 10
+    // let divFromDom = <h1>Hello</h1>
+    let a = 10
+    console.log(a);
+
+    a = 20
+
+    console.log(a);
+
+
+
+    let b = 30
+    b += 10
+
+
+    let divFromDom = document.getElementById('divFromDom')
+    divFromDom.innerHTML += `<h1>How Are you doing</h1>`
+    divFromDom.innerHTML = `<h1>Everybody</h1>`
+
+    console.log('Hello' + 'Everybody');
+
+
+    // = is to overide the previous value and place a new value
+    // += is to add to the previous value
+    // *=, /=
+
+    // Arithmetic Operators
+    // +,*,/,%
+
+    // console.log(1 % 2);
+    console.log('2' * '2');
+
+    // Comparison Operators
+    let bool = 4 > 3
+    console.log(bool);
+    console.log(4 < 3);
+    console.log(4 <= 4);
+    console.log(4 >= 4);
+    console.log(4 == 4);
+    console.log('4' == 4);
+    console.log('' == 0);
+    console.log(4 === '4');
+    console.log(4 === 4);
+    console.log(0 === '');
+    console.log(true === 1);
+    console.log(false === 0);
+    console.log(0 !== '0');
+    console.log(1 === true);
+
+
+    console.log(!true);
+    console.log(Number(true));
+
+    // Logical Operators
+    // Or Operator
+    let logOpe = false || false || true
+    console.log(logOpe);
+
+    console.log(4 !== 4 || 0 == true || 1 !== !false);
+
+    // And Operator
+    let andOpe = false && false && false
+
+    console.log('' !== '0' && '0' == !(true) && 0 !== !(4 != '4'));
+
+
+    // Increment and decrement operator
+    let index = 0
+    console.log(index++);
+    console.log(index);
+
+    let int = 0
+    console.log(++int);
+    console.log(int);
+
+    let newIndex = 0
+    let h1Tag = document.getElementById('h1Tag')
+    h1Tag.innerHTML = `${newIndex}`
+
+    function increaseNum() {
+        ++newIndex
+        h1Tag.innerHTML = `${newIndex}`
+    }
+
+    // Decrement Operator
+    // Post Decrement
+    let latestInt = 1
+    console.log(latestInt--);
+    console.log(latestInt);
+
+    // Pre Decrement
+    let latIndex = 1
+    console.log(--latIndex);
+    console.log(latIndex);
+
+
+    // Tenary Operator
+    let myString = 'Javascript'
+    console.log(myString.toLowerCase().includes('java'));
+    let undef 
+
+
+    // Truthy Value
+    // 'A string with values in it'
+    // Any number from 1 to infinity
+    // Boolean True
+1
+    // Falsy Values
+    // empty string ''
+    // The number zero 0
+    // Boolean False
+    // Undefined Variable
+    // Null Variable
+    
+    let isRaining = null
+    isRaining ?
+        console.log('You need a rain Coat') :
+        console.log('You do not need a Rain Coat');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

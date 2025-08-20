@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    for (let index = 1; index <= 11; index++) {
+        console.log(index);
+    }
+
+
+    for (let i = 0; i < 5; i++) {
+        console.log(i * 2);
+    }
+
+
+    let mystring = 'Javascript'
+    console.log(mystring[0]);
+
+
+    console.log(mystring.length);
+
+    let myArr = ['Habeeb', 'Habeeb 2', 'Felix', 'Temmy', 'Iyanu', 'Ibrahim', 'Okiki', 'Oreofe']
+    // console.log(myArr[0]);
+
+
+
+
+    // myArr[1]
+    for (let index = 0; index < myArr.length; index++) {
+        const element = myArr[index];
+        console.log(element);
+    }
+
+    for (const element of myArr) {
+        console.log(element);
+    }
+
+    for (let i = 12; i > 0; i--) {
+        console.log(i);
+    }
+
+    for (const element of myArr) {
+        console.log(element);
+    }
+
+    for (let int = 1; int < 13; int++) {
+        console.log(`2 * ${int} = ${2 * int}`);
+    }
+
+    let i = 1
+    while (i < 13) {
+        console.log(`2 * ${i} = ${2 * i}`);
+        i++
+    }
+
+    let int = 12
+    do {
+        console.log(int);
+        int++
+    } while (int < 1);
+
+
+    // break, continue
+    for (let index = 1; index <= 10; index++) {
+        if (index === 5) {
+            break;
+        }
+        console.log(index);
+    }
+
+    let myArr2 = ['Habeeb', 'Habeeb 2', 'Felix', 'Temmy', 'Iyanu', 'Ibrahim', 'Okiki', 'Oreofe']
+
+    for (let i = 0; i < myArr2.length; i++) {
+        const element = myArr2[i];
+        if (element.toLowerCase() === 'habeeb') {
+            console.log(element);
+            break
+        }
+    }
+
+
+    // Continue
+
+    for (let index = 0; index < 6; index++) {
+        if (index === 3) {
+            continue
+        }
+        console.log(index);
+    }
+
+    for (let index = 0; index < myArr2.length; index++) {
+        const element = myArr2[index];
+        if (element.toLowerCase() === 'habeeb' || element.toLowerCase() === 'felix' || element.toLowerCase() === 'ibrahim') {
+            continue
+        }
+        console.log(element);
+    }
+
+
+    // let a = 10
+    // let b = 15
+    // console.log(`The sum of ${a} and ${b} is equals to ${a + b}`);
+
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Table Generator</h1>
+        <input type="number" id="startNum">
+        <input type="number" id="endNum">
+        <button onclick="generateTables()">Generate</button>
+        <div id="result"></div>
+        <!-- <div id="example">Hello</div> -->
+    </div>
+</body>
+
+</html>
+<script>
+    // example.innerHTML += 'How are you guys doing?'
+    function generateTables() {
+        let startNum = document.getElementById('startNum').value.trim()
+        let endNum = document.getElementById('endNum').value.trim()
+        let result = document.getElementById('result')
+        // startNum = '2'
+        // endNum = '4'
+        result.innerHTML = ""
+        if (!startNum || !endNum) {
+            alert(`all fields are mandaratory`)
+        } else if (+startNum > +endNum) {
+            // start Num = '4'
+            // endNum = '2'
+            // alert(` Start Number has to be less than End Number`)
+            for (let int = +startNum; int >= +endNum; int--) {
+                result.innerHTML += `<h4>Multiplication Table For ${int}</h4>`
+                for (let index = 1; index < 13; index++) {
+                    // const element = array[index];
+                    result.innerHTML += `<h6>${int} * ${index} =  ${int * index}</h6>`
+                }
+                // const element = array[index];
+
+            }
+        } else {
+            for (let int = +startNum; int <= +endNum; int++) {
+                result.innerHTML += `<h4>Multiplication Table For ${int}</h4>`
+                for (let index = 1; index < 13; index++) {
+                    // const element = array[index];
+                    result.innerHTML += `<h6>${int} * ${index} =  ${int * index}</h6>`
+                }
+                // const element = array[index];
+
+            }
+
+
+        }
+
+
+    }
+</script>

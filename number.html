@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=C, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="wordValues">
+    <button onclick="checkWord()">Check Word</button>
+    <h1 id="showWord"></h1>
+</body>
+
+</html>
+<script>
+    let wordValues = document.getElementById('wordValues')
+    let showWord = document.getElementById('showWord')
+    // wordValues.value = 'whatever i want'
+
+    function checkWord() {
+        console.log(wordValues.value);
+        console.log(typeof wordValues.value);
+        let textWord = wordValues.value.toLowerCase().
+            replaceAll('fuck', 'f**k').
+            replaceAll('shit', 'sh*t').
+            replaceAll('bitch', 'b**ch')
+        console.log(textWord[0]);
+        showWord.innerHTML = textWord.replace(textWord[0], textWord[0].toUpperCase())
+    }
+
+
+    // Numbers
+    let a = 10
+    let myString = 'Hello Everybody'
+    let b = myString.length
+
+    console.log('2' + '2');
+    let num = '30'
+
+    // Number ParseInt +
+    console.log(Number(num) + 15);
+    console.log(parseInt(num) + 15);
+    console.log(+num + 15);
+
+    // Math Object
+    const PI = 3.16517825627816187156278178
+
+    // Math.round
+    console.log(Math.round(3.5657));
+    console.log(Math.round(3.4657));
+
+    console.log(Math.ceil(3.00000001322));
+    console.log(Math.floor(3.999999999));
+
+    console.log(Math.min(5, 2, 4, 6, 8, 9, 1));
+    console.log(Math.max(5, 2, 4, 6, 8, 9, 1));
+    console.log(Math.random());
+    
+
+    console.log(Math.round(Math.random() * 10));
+    
+    // from 0.0000001 to 0.999999
+    // Math.round(0.0001)
+
+    // Math.round(9.99999)
+
+    console.log(Math.round(Math.random() * 10) + 5); 
+    
+
+
+
+
+
+
+</script>
