@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="sayHello()">Say Hello</button>
+</body>
+
+</html>
+
+<script>
+    console.log('Hello');
+    // Global Scope, Function Scope & Block Scope
+
+    // Global Scope
+
+    let maryKay = 'Javascript from Global Scope'
+
+    function sayHello() {
+        let maryKay = 'Javascript from function scope'
+
+        console.log('Say hello to user');
+
+        console.log(maryKay);
+
+        var latestVar = 'Variable created with var in a function scope'
+
+    }
+
+    sayHello()
+
+    // console.log(felix);
+
+
+    // console.log(latestVar);
+
+
+    function sayHi() {
+        console.log(newVar);
+    }
+
+    for (let index = 0; index < 3; index++) {
+        let element = 'Everybody';
+        console.log(element);
+
+        var NewestVar = 'Variable created with var in a bloxk scope'
+
+    }
+
+    console.log(NewestVar);
+
+
+
+
+
+    if (true) {
+        let Hello = 'Hello Everybody'
+        console.log(Hello);
+    }
+
+
+    // Global scope available inside every other scope
+    // Function and Block scope, not available in any other scope
+    // Function scope can hold a variabl created with let, const & var
+    // Block scope can only hold a variale reated with let and const, it cant hold a variable created with var
+
+
+
+    function sayMyName() {
+        let name = 'Habeeb'
+        function SayName() {
+            console.log(name);
+        }
+
+        SayName()
+    }
+    sayMyName()
+
+    // Types of Functions
+    // Function Deceration
+    function sayAny() {
+        console.log('Say anything to user');
+    };
+    sayAny();
+
+    // Anonymous Function cannot stay alone, a function with no name
+    // Function Expression: Assigning an anonymous function to a variable
+    let anonymousFunction = function () {
+        console.log('I am an anonymous function that was assigned to a variable that makes me a Function expression');
+    }
+    anonymousFunction();
+
+    // Immediately Invoked Function expression IIFE
+    // Self Invoked Function Expression SIFE
+    (function () {
+        console.log('This is an IIFE or SIFE');
+    })();
+
+
+    // Arrow Function
+    const arrowFunction = () => {
+        console.log('This is an arrow function');
+    };
+
+    arrowFunction();
+
+    // Functions With parameter
+    function paramsEx(params) {
+        console.log(params + 12);
+    };
+
+    paramsEx('3');
+    paramsEx('40');
+
+
+    let addNum = (a, b, c) => {
+        console.log(a + b + c);
+    }
+
+    addNum(4, 2)
+
+
+    function addManyNum() {
+        console.log(arguments);
+        let copiedArr = []
+        for (let index = 0; index < arguments.length; index++) {
+            const element = arguments[index];
+            copiedArr.push(element)
+        }
+
+        console.log(copiedArr);
+        
+    }
+
+    addManyNum(1, 2, 3, 5, 6, 7, 8, 4, 5, 4, 4, 3, 3, 3, 2, 2, 2, 2, 2)
+
+    let numArr = [1, 2, 3, 4, 5, 6]
+</script>
